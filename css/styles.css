@@ -317,7 +317,6 @@ button {
   max-height: 120px;
   left: 576px;
   top: 518px;
-
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
@@ -325,6 +324,7 @@ button {
 .window-textarea:hover,
 .widnow-textarea:focus{
   border-color: var(--address-logo-color);
+  outline: none;
 }
 .window-items{
   position: relative;
@@ -350,31 +350,34 @@ button {
 .window-input:focus + .windows-svg{
   fill: var(--address-logo-color);
 }
-
-.policy-span{
-  text-decoration: underline;
-  color: #2196f3;
-
+.widnow-policy{
+  display: flex;
+  align-items: center;
+  color: var(--address-logo-color);
 }
-.policy{
-  position: relative;
-  top: 20px;
-  padding-bottom: 20px;
+.checkbox{
+  -webkit-appearance: none;
+      -moz-appearance: none;
+           appearance: none;
 }
-.window-policy{
-  position: absolute;
-  width: 397px;
-  height: 24px;
-  left: 613px;
-  top: 658px;
-
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
+.iconcheck{
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-top: 20px;
+  align-items: center;
+}
+.checkbox:checked + .iconcheck{
+  background-image: url('../images/iconcheking.svg');
+  background-color: var(--address-logo-color) ;
+  background-size: contain;
+  background-origin: border-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: var(--address-logo-color);
+  
 }
 textarea{
  resize: none;
